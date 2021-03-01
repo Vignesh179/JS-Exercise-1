@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    </head>
+    <body>
+        <h1 id="stri"></h1>
+        <script>
+            var number,fact;
+            number = parseInt(prompt("Enter a Positive Integer"));
+            if(number<0){
+                document.getElementById('stri').innerHTML = "Negative Number does not a factorial number";
+            }
+            else if (number===0) {
+                document.getElementById('stri').innerHTML = "Factorial number is 1";
+            }
+            else{
+                fact = 1;
+                for(i=1; i<=number; i++) {
+                    fact=fact*i;
+                }
+                document.getElementById('stri').innerHTML= fact;
+            }
+        </script>
+    </body>
+</html>

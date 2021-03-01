@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Sorting</title>
+</head>
+<body>
+    
+<script>
+var asc = [];
+var i;
+for (i = 0; i < 10; i++) {
+  asc.push(Number(prompt("Enter 10 numbers to sort:")));
+}
+document.write("Ascending Orders are: " + asc.sort(function(a, b) {
+  return a - b
+}));
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body>
+  <h1 align="center" class="title" style="padding: 10px;">EMI Calculator!</h1>
+  <div class="section">
+    <div class="field">
+      <label class="label">Load Amount Needed?</label>
+      <div class="control">
+        <input class="input" type="text" id="loanamt">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Loan Interest %</label>
+      <div class="control">
+        <input class="input" type="text" id="loaninterest">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Tenure Duration:</label>
+      <div class="control">
+        <input class="input" type="text" id="tenure">
+      </div>
+    </div>
+    <h1 class="title" id="loanms"></h1>
+    <h1 class="title" id="loanmsg"></h1>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-success" onclick="myFunction()">Calculate!</button>
+      </div>
+      <div class="control">
+        <button class="button is-link is-light" onclick="clr()">Clear!</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function myFunction() {
+      var la = parseFloat(document.getElementById("loanamt").value);
+      var lp = parseFloat(document.getElementById("loaninterest").value);
+      var tm = parseFloat(document.getElementById("tenure").value);
+      var perc = parseFloat(la * lp / 100);
+      var tr = la + perc;
+      var tremi;
+      tremi = tr / tm;
+      document.getElementById("loanms").innerHTML = "Total Interest for Your Loan is " + perc;
+      document.getElementById("loanmsg").innerHTML = "Your Monthly EMI will be " + tremi;
+    }
+    function clr() {
+      document.getElementById("loanamt").value = " ";
+      document.getElementById("loaninterest").value = " ";
+      document.getElementById("tenure").value = " ";
+    }
+  </script>
+</body>
+</html>

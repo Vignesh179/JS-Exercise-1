@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    </head>
+    <body>
+        <h1 id="stri"></h1>
+        <script>
+           function WordCount(stri) { 
+               stri=prompt("enter the words to count");
+               
+            return stri.split(" ").length; 
+            }
+
+            document.getElementById('stri').innerHTML= WordCount();
+        </script>
+    </body>
+</html>

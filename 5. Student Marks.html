@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    </head>
+    <body>
+        <h1 id="stri"></h1>
+        <h1 id="perc"></h1>
+        <script>
+         let tamil,english,maths,total,percentage;
+         tamil= parseFloat(prompt('Enter the Tamil marks'));
+         english=parseFloat(prompt('Enter the English marks'));
+         maths=parseFloat(prompt('Enter the Maths Marks'));
+         total = tamil+english+maths;
+         percentage=total/3;
+         document.getElementById('stri').innerHTML= "Total Marks is " +total;
+         document.getElementById('perc').innerHTML= "Total Percentage is " +percentage;
+        </script>
+    </body>
+</html>
